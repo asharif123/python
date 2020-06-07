@@ -20,6 +20,8 @@ class Bank:
         self.make_withdrawal(amount)
         other_user.make_deposit(amount)
         print("\n$" + str(amount) + " has been transferred from " + self.name + "'s account to " + (other_user.name) + "'s account.")
+        print("Total in " + self.name + "'s account $" + str(self.balance))
+        print("Total in " + (other_user.name) + "'s account " + "$" + str(other_user.balance))
         
 awad = Bank("Awad",33000)
 for i in range(3):
@@ -43,7 +45,5 @@ for i in range(3):
 jackson.display_bank_balance()
 
 awad.transfer_money(jackson,1200)
-awad.display_bank_balance()
-jackson.display_bank_balance()
 
         
